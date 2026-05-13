@@ -213,9 +213,10 @@ function Hero() {
 }
 
 const stats = [
-  { value: "+500", label: "Merchants onboard" },
-  { value: "99.9%", label: "Uptime guarantee" },
-  { value: "<5s", label: "Average checkout" },
+  { value: "+500", label: "Merchants" },
+  { value: "99.9%", label: "Uptime" },
+  { value: "Fast", label: "Checkout system" },
+  { value: "Real-time", label: "Analytics" },
 ];
 
 function SocialProof() {
@@ -232,26 +233,31 @@ function SocialProof() {
           </p>
         </div>
 
-        <div className="border border-border bg-background p-6 md:p-10">
-          <img
-            src={socialProofImage}
-            alt="KasiPOS sales dashboard and POS terminal"
-            width={1600}
-            height={1024}
-            loading="lazy"
-            className="mx-auto w-full max-w-5xl"
-          />
-        </div>
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="border border-border bg-background p-6 md:p-10">
+            <img
+              src={socialProofImage}
+              alt="KasiPOS sales dashboard and POS terminal"
+              width={1280}
+              height={1280}
+              loading="lazy"
+              className="mx-auto w-full max-w-xl"
+            />
+          </div>
 
-        <div className="mt-px grid grid-cols-1 gap-px bg-border md:grid-cols-3">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-background p-8 text-center md:text-left">
-              <div className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-                {s.value}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="aspect-square border border-[#01143c] bg-background p-6 transition-colors hover:border-primary flex flex-col justify-between"
+              >
+                <div className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+                  {s.value}
+                </div>
+                <div className="text-sm text-muted-foreground">{s.label}</div>
               </div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
