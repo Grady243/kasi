@@ -18,8 +18,8 @@ import {
   RefreshCw,
   Gauge,
 } from "lucide-react";
-import heroImage from "@/assets/hero-dashboard.png";
 import howItWorksImage from "@/assets/how-it-works.png";
+import socialProofImage from "@/assets/social-proof.png";
 import { useTheme } from "@/hooks/use-theme";
 
 export const Route = createFileRoute("/")({
@@ -207,14 +207,51 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto mt-20 max-w-5xl border border-border bg-surface p-2">
+      </div>
+    </section>
+  );
+}
+
+const stats = [
+  { value: "+500", label: "Merchants onboard" },
+  { value: "99.9%", label: "Uptime guarantee" },
+  { value: "<5s", label: "Average checkout" },
+];
+
+function SocialProof() {
+  return (
+    <section className="border-b border-border bg-surface">
+      <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mb-12 max-w-2xl">
+          <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            Performance you can measure
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Merchants of every size rely on KasiPOS for fast, reliable, real-time commerce operations.
+          </p>
+        </div>
+
+        <div className="border border-border bg-background p-6 md:p-10">
           <img
-            src={heroImage}
-            alt="KasiPOS dashboard preview"
-            width={1280}
-            height={960}
-            className="w-full"
+            src={socialProofImage}
+            alt="KasiPOS sales dashboard and POS terminal"
+            width={1600}
+            height={1024}
+            loading="lazy"
+            className="mx-auto w-full max-w-5xl"
           />
+        </div>
+
+        <div className="mt-px grid grid-cols-1 gap-px bg-border md:grid-cols-3">
+          {stats.map((s) => (
+            <div key={s.label} className="bg-background p-8 text-center md:text-left">
+              <div className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+                {s.value}
+              </div>
+              <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -419,6 +456,7 @@ function Index() {
     <main className="min-h-screen bg-background">
       <Nav />
       <Hero />
+      <SocialProof />
       <WhyKasiPOS />
       <Features />
       <HowItWorks />
