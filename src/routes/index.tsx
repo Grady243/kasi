@@ -18,8 +18,7 @@ import {
   RefreshCw,
   Gauge,
 } from "lucide-react";
-import socialProofImage from "@/assets/social-proof.png";
-import { Store, Boxes, CreditCard } from "lucide-react";
+import { Store, Boxes, CreditCard, Users, Activity, Clock, TrendingUp } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 
 export const Route = createFileRoute("/")({
@@ -216,53 +215,74 @@ function Hero() {
 }
 
 const stats = [
-  { value: "500+", label: "Active Merchants" },
-  { value: "99.9%", label: "System Uptime" },
-  { value: "24/7", label: "Sales Monitoring" },
-  { value: "10K+", label: "Transactions Processed" },
+  {
+    icon: Users,
+    value: "500+",
+    label: "Active Merchants",
+    desc: "Shops growing with KasiPOS every day.",
+  },
+  {
+    icon: Activity,
+    value: "99.9%",
+    label: "System Uptime",
+    desc: "Reliable infrastructure you can count on.",
+  },
+  {
+    icon: Clock,
+    value: "24/7",
+    label: "Sales Monitoring",
+    desc: "Always-on visibility across every register.",
+  },
+  {
+    icon: TrendingUp,
+    value: "10K+",
+    label: "Transactions",
+    desc: "Processed securely, every single week.",
+  },
 ];
 
 function SocialProof() {
   return (
-    <section className="border-b border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mb-12 max-w-2xl">
-          <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            Performance you can measure
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Merchants of every size rely on KasiPOS for fast, reliable, real-time commerce operations.
+    <section className="border-b border-border bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div className="max-w-xl">
+            <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+              Numbers that speak for themselves
+            </h2>
+          </div>
+          <p className="max-w-md text-sm text-muted-foreground">
+            From neighborhood shops to growing chains — KasiPOS keeps commerce running fast, reliable and always on.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="border border-border bg-background p-6 md:p-10">
-            <img
-              src={socialProofImage}
-              alt="KasiPOS sales dashboard and POS terminal"
-              width={1280}
-              height={1280}
-              loading="lazy"
-              className="mx-auto w-full max-w-xl"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 border border-border bg-background">
-            {stats.map((s, i) => (
-              <div
-                key={s.label}
-                className={`aspect-square p-8 flex flex-col justify-between transition-colors hover:bg-surface ${
-                  i % 2 === 0 ? "border-r border-border" : ""
-                } ${i < 2 ? "border-b border-border" : ""}`}
-              >
-                <div className="text-4xl font-semibold tracking-tight text-[#03ab3a] md:text-5xl">
-                  {s.value}
+        <div className="grid grid-cols-1 border border-border sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((s, i) => (
+            <div
+              key={s.label}
+              className={`group relative bg-background p-8 transition-colors hover:bg-surface ${
+                i < stats.length - 1 ? "border-b border-border lg:border-b-0 lg:border-r" : ""
+              } ${i < 2 ? "sm:border-b sm:border-border" : ""} ${
+                i % 2 === 0 ? "sm:border-r sm:border-border lg:border-r" : ""
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <div className="inline-flex h-10 w-10 items-center justify-center bg-primary/10 text-primary">
+                  <s.icon className="h-5 w-5" />
                 </div>
-                <div className="text-sm text-muted-foreground">{s.label}</div>
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                  0{i + 1}
+                </span>
               </div>
-            ))}
-          </div>
+              <div className="mt-10 text-5xl font-semibold tracking-tight text-foreground">
+                {s.value}
+              </div>
+              <div className="mt-2 text-sm font-medium text-foreground">{s.label}</div>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <div className="mt-6 h-px w-8 bg-[#03ab3a] transition-all duration-300 group-hover:w-16" />
+            </div>
+          ))}
         </div>
       </div>
     </section>
