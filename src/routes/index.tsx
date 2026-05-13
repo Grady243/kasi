@@ -19,9 +19,7 @@ import {
   Gauge,
 } from "lucide-react";
 import socialProofImage from "@/assets/social-proof.png";
-import step1Image from "@/assets/step-1-store.png";
-import step2Image from "@/assets/step-2-products.png";
-import step3Image from "@/assets/step-3-selling.png";
+import { Store, Boxes, CreditCard } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 
 export const Route = createFileRoute("/")({
@@ -94,24 +92,21 @@ const whyItems = [
 const steps = [
   {
     n: "01",
-    title: "Create your account",
-    desc: "Set up your business quickly with a simple onboarding experience — name, currency and tax rules in minutes.",
-    image: step1Image,
-    alt: "Store onboarding setup illustration",
+    title: "Create Your Store",
+    desc: "Set up your store quickly with a simple onboarding process.",
+    icon: Store,
   },
   {
     n: "02",
-    title: "Add your products",
-    desc: "Organize your inventory and manage products effortlessly — import a CSV or add items in a few clicks.",
-    image: step2Image,
-    alt: "Inventory and product management illustration",
+    title: "Add Your Products",
+    desc: "Manage inventory and organize products in real time.",
+    icon: Boxes,
   },
   {
     n: "03",
-    title: "Start selling instantly",
-    desc: "Process payments and monitor sales performance in real time, right from the register.",
-    image: step3Image,
-    alt: "POS checkout and analytics illustration",
+    title: "Start Selling Instantly",
+    desc: "Process payments and monitor sales live.",
+    icon: CreditCard,
   },
 ];
 
@@ -359,25 +354,16 @@ function HowItWorks() {
           {steps.map((s) => (
             <div
               key={s.n}
-              className="group flex flex-col bg-background transition-colors hover:bg-surface-2"
+              className="flex flex-col bg-background p-8 transition-colors hover:bg-surface-2"
             >
-              <div className="flex aspect-[4/3] items-center justify-center border-b border-border bg-surface p-6">
-                <img
-                  src={s.image}
-                  alt={s.alt}
-                  width={512}
-                  height={512}
-                  loading="lazy"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-8">
-                <div className="text-5xl font-bold leading-none tracking-tight text-[#03ab3a] md:text-6xl">
+              <div className="flex items-center justify-between">
+                <span className="text-5xl font-bold leading-none tracking-tight text-[#03ab3a] md:text-6xl">
                   {s.n}
-                </div>
-                <h3 className="mt-6 text-xl font-semibold">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                </span>
+                <s.icon className="h-8 w-8 text-[#03ab3a]" strokeWidth={1.75} />
               </div>
+              <h3 className="mt-8 text-xl font-semibold">{s.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>
           ))}
         </div>
