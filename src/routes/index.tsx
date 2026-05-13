@@ -160,6 +160,7 @@ function Nav() {
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#features" className="hover:text-foreground transition-colors">Features</a>
+          <a href="#trust" className="hover:text-foreground transition-colors">Trust</a>
           <a href="#why" className="hover:text-foreground transition-colors">Why KasiPOS</a>
           <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
           <a href="#testimonials" className="hover:text-foreground transition-colors">Customers</a>
@@ -243,15 +244,15 @@ const stats = [
 
 function SocialProof() {
   return (
-    <section className="border-b border-border bg-background">
+    <section id="trust" className="border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-12 max-w-2xl">
           <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             Numbers that speak for themselves
           </h2>
-          <p className="mt-4 text-sm text-muted-foreground">
-            From neighborhood shops to growing chains — KasiPOS keeps commerce running fast, reliable and always on.
+          <p className="mt-4 text-muted-foreground">
+            From neighborhood shops to growing retail chains, thousands of merchants rely on KasiPOS every single day to power their commerce. Our platform keeps your registers fast, your inventory accurate and your business always on — backed by infrastructure built for scale and a team obsessed with reliability.
           </p>
         </div>
 
@@ -297,7 +298,7 @@ function WhyKasiPOS() {
             Why businesses choose KasiPOS
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Six reasons merchants of every size move their day-to-day operations onto KasiPOS — and stay.
+            Six reasons merchants of every size move their day-to-day operations onto KasiPOS — and stay. From ultra-fast checkout to real-time inventory and bank-grade security, every detail is engineered to remove friction from your shop floor and give you back the time you'd rather spend growing the business.
           </p>
         </div>
 
@@ -327,7 +328,7 @@ function Features() {
             Everything you need to run your shop
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Built for merchants who want clarity, speed and control without the bloat.
+            Built for merchants who want clarity, speed and control without the bloat. Every feature is designed around the realities of running a busy store — fast checkouts, accurate stock, clear reports — so you can focus on customers instead of fighting your tools.
           </p>
         </div>
 
@@ -364,7 +365,7 @@ function HowItWorks() {
             Up and running in three steps
           </h2>
           <p className="mt-4 text-muted-foreground">
-            From signup to first sale in less than an hour. No installer, no training day.
+            From signup to first sale in less than an hour — no installer, no training day, no IT call. Create your store, add your products and start ringing up customers from any device, with everything synced in real time from day one.
           </p>
         </div>
 
@@ -400,7 +401,7 @@ function Testimonials() {
             Loved by merchants worldwide
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Real teams, real shops, real numbers. Here's what they say about KasiPOS.
+            Real teams, real shops, real numbers. From boutique cafés to multi-store retailers, here's what merchants around the world say about running their business on KasiPOS — and why they don't look back.
           </p>
         </div>
 
