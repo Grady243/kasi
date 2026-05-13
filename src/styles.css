@@ -37,30 +37,57 @@
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
+/* LIGHT MODE (default) */
 :root {
   --radius: 0px;
-  --background: oklch(0.18 0.09 264);
-  --surface: oklch(0.23 0.08 264);
-  --surface-2: oklch(0.28 0.07 264);
-  --foreground: oklch(0.98 0.005 250);
-  --muted: oklch(0.23 0.08 264);
-  --muted-foreground: oklch(0.78 0.02 250);
-  --card: oklch(0.23 0.08 264);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.23 0.08 264);
-  --popover-foreground: oklch(0.98 0.005 250);
-  --primary: oklch(0.68 0.20 145);
-  --primary-foreground: oklch(0.15 0.05 264);
-  --secondary: oklch(0.28 0.07 264);
-  --secondary-foreground: oklch(0.98 0.005 250);
-  --accent: oklch(0.68 0.20 145);
-  --accent-foreground: oklch(0.15 0.05 264);
-  --destructive: oklch(0.65 0.22 25);
-  --destructive-foreground: oklch(0.98 0.005 250);
-  --border: oklch(0.32 0.07 264);
-  --border-strong: oklch(0.40 0.07 264);
-  --input: oklch(0.32 0.07 264);
-  --ring: oklch(0.68 0.20 145);
+  --background: #ffffff;
+  --surface: #f7f8fa;
+  --surface-2: #eef0f4;
+  --foreground: #01143c;
+  --muted: #f1f3f7;
+  --muted-foreground: #5b6479;
+  --card: #ffffff;
+  --card-foreground: #01143c;
+  --popover: #ffffff;
+  --popover-foreground: #01143c;
+  --primary: #03ab3a;
+  --primary-foreground: #ffffff;
+  --secondary: #01143c;
+  --secondary-foreground: #ffffff;
+  --accent: #03ab3a;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e3e6ee;
+  --border-strong: #c9cfdc;
+  --input: #e3e6ee;
+  --ring: #03ab3a;
+}
+
+/* DARK MODE */
+.dark {
+  --background: #01143c;
+  --surface: #0a1f54;
+  --surface-2: #102a6b;
+  --foreground: #f5f7fb;
+  --muted: #0a1f54;
+  --muted-foreground: #aab4cf;
+  --card: #0a1f54;
+  --card-foreground: #f5f7fb;
+  --popover: #0a1f54;
+  --popover-foreground: #f5f7fb;
+  --primary: #03ab3a;
+  --primary-foreground: #ffffff;
+  --secondary: #102a6b;
+  --secondary-foreground: #f5f7fb;
+  --accent: #03ab3a;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1a3380;
+  --border-strong: #2a47a0;
+  --input: #1a3380;
+  --ring: #03ab3a;
 }
 
 @layer base {
