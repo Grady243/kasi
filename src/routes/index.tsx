@@ -245,14 +245,12 @@ function SocialProof() {
   return (
     <section className="border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              Numbers that speak for themselves
-            </h2>
-          </div>
-          <p className="max-w-md text-sm text-muted-foreground">
+        <div className="mb-12 max-w-2xl">
+          <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            Numbers that speak for themselves
+          </h2>
+          <p className="mt-4 text-sm text-muted-foreground">
             From neighborhood shops to growing chains — KasiPOS keeps commerce running fast, reliable and always on.
           </p>
         </div>
