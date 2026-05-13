@@ -213,10 +213,10 @@ function Hero() {
 }
 
 const stats = [
-  { value: "+500", label: "Merchants" },
-  { value: "99.9%", label: "Uptime" },
-  { value: "Fast", label: "Checkout system" },
-  { value: "Real-time", label: "Analytics" },
+  { value: "500+", label: "Active Merchants" },
+  { value: "99.9%", label: "System Uptime" },
+  { value: "24/7", label: "Sales Monitoring" },
+  { value: "10K+", label: "Transactions Processed" },
 ];
 
 function SocialProof() {
@@ -245,13 +245,15 @@ function SocialProof() {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {stats.map((s) => (
+          <div className="grid grid-cols-2 border border-border bg-background">
+            {stats.map((s, i) => (
               <div
                 key={s.label}
-                className="aspect-square border border-[#01143c] bg-background p-6 transition-colors hover:border-primary flex flex-col justify-between"
+                className={`aspect-square p-8 flex flex-col justify-between transition-colors hover:bg-surface ${
+                  i % 2 === 0 ? "border-r border-border" : ""
+                } ${i < 2 ? "border-b border-border" : ""}`}
               >
-                <div className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+                <div className="text-4xl font-semibold tracking-tight text-[#03ab3a] md:text-5xl">
                   {s.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{s.label}</div>
