@@ -81,12 +81,36 @@ const features = [
 ];
 
 const whyItems = [
-  { icon: Gauge, title: "Ultra-fast checkout", desc: "Process sales in under 5 seconds with a register built for speed." },
-  { icon: RefreshCw, title: "Real-time inventory", desc: "Stock updates the instant a sale closes — across every device." },
-  { icon: BarChart3, title: "Intuitive dashboard", desc: "A clean interface that surfaces what matters, hides what doesn't." },
-  { icon: MonitorSmartphone, title: "Works on every device", desc: "Tablet, phone or laptop — same experience, same data." },
-  { icon: Lock, title: "Secure by default", desc: "Bank-grade encryption, daily backups and full audit trails." },
-  { icon: Rocket, title: "Built to scale", desc: "From a single shop to a chain of stores, without changing tools." },
+  {
+    icon: Gauge,
+    title: "Ultra-fast checkout",
+    desc: "Process sales in under 5 seconds with a register built for speed.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Real-time inventory",
+    desc: "Stock updates the instant a sale closes — across every device.",
+  },
+  {
+    icon: BarChart3,
+    title: "Intuitive dashboard",
+    desc: "A clean interface that surfaces what matters, hides what doesn't.",
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Works on every device",
+    desc: "Tablet, phone or laptop — same experience, same data.",
+  },
+  {
+    icon: Lock,
+    title: "Secure by default",
+    desc: "Bank-grade encryption, daily backups and full audit trails.",
+  },
+  {
+    icon: Rocket,
+    title: "Built to scale",
+    desc: "From a single shop to a chain of stores, without changing tools.",
+  },
 ];
 
 const steps = [
@@ -112,25 +136,29 @@ const steps = [
 
 const testimonials = [
   {
-    quote: "KasiPOS changed the way we manage our store. Everything is faster — checkout, restocking, reports.",
+    quote:
+      "KasiPOS changed the way we manage our store. Everything is faster — checkout, restocking, reports.",
     name: "Amina Ndlovu",
     role: "Store Manager",
     company: "Urban Threads",
   },
   {
-    quote: "We switched from a clunky legacy POS and never looked back. The dashboard alone saves me hours every week.",
+    quote:
+      "We switched from a clunky legacy POS and never looked back. The dashboard alone saves me hours every week.",
     name: "Marcus Lee",
     role: "Owner",
     company: "Lee & Sons Grocery",
   },
   {
-    quote: "Multi-device sync is flawless. I can ring up a sale on a tablet, then check the books from my laptop at home.",
+    quote:
+      "Multi-device sync is flawless. I can ring up a sale on a tablet, then check the books from my laptop at home.",
     name: "Sofia Carvalho",
     role: "Co-founder",
     company: "Noma Coffee Bar",
   },
   {
-    quote: "Inventory used to be our biggest headache. With KasiPOS we know exactly what's on the shelf in real time.",
+    quote:
+      "Inventory used to be our biggest headache. With KasiPOS we know exactly what's on the shelf in real time.",
     name: "David Okafor",
     role: "Operations Lead",
     company: "Bright Pharmacy",
@@ -160,10 +188,18 @@ function Nav() {
           KasiPOS
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-          <a href="#why" className="hover:text-foreground transition-colors">Why KasiPOS</a>
-          <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
-          <a href="#testimonials" className="hover:text-foreground transition-colors">Customers</a>
+          <a href="#features" className="hover:text-foreground transition-colors">
+            Features
+          </a>
+          <a href="#why" className="hover:text-foreground transition-colors">
+            Why KasiPOS
+          </a>
+          <a href="#how" className="hover:text-foreground transition-colors">
+            How it works
+          </a>
+          <a href="#testimonials" className="hover:text-foreground transition-colors">
+            Customers
+          </a>
         </nav>
         <div className="flex items-center gap-3">
           <ThemeToggle />
@@ -192,7 +228,8 @@ function Hero() {
             Simplify your sales with KasiPOS
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-balance text-lg text-muted-foreground">
-            A modern point-of-sale system to manage sales, inventory and reports effortlessly — across every device, in every store.
+            A modern point-of-sale system to manage sales, inventory and reports effortlessly —
+            across every device, in every store.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a
@@ -209,7 +246,6 @@ function Hero() {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
@@ -232,7 +268,8 @@ function SocialProof() {
             Performance you can measure
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Merchants of every size rely on KasiPOS for fast, reliable, real-time commerce operations.
+            Merchants of every size rely on KasiPOS for fast, reliable, real-time commerce
+            operations.
           </p>
         </div>
 
@@ -279,13 +316,17 @@ function WhyKasiPOS() {
             Why businesses choose KasiPOS
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Six reasons merchants of every size move their day-to-day operations onto KasiPOS — and stay.
+            Six reasons merchants of every size move their day-to-day operations onto KasiPOS — and
+            stay.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
           {whyItems.map((item) => (
-            <div key={item.title} className="bg-background p-8 transition-colors hover:bg-surface-2">
+            <div
+              key={item.title}
+              className="bg-background p-8 transition-colors hover:bg-surface-2"
+            >
               <div className="inline-flex h-10 w-10 items-center justify-center bg-primary/10 text-primary">
                 <item.icon className="h-5 w-5" />
               </div>
@@ -397,11 +438,16 @@ function Testimonials() {
               <p className="mt-5 text-base leading-relaxed text-foreground">"{t.quote}"</p>
               <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
                 <div className="flex h-10 w-10 items-center justify-center bg-secondary text-sm font-semibold text-secondary-foreground">
-                  {t.name.split(" ").map((n) => n[0]).join("")}
+                  {t.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
                 </div>
                 <div>
                   <div className="text-sm font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role} · {t.company}</div>
+                  <div className="text-xs text-muted-foreground">
+                    {t.role} · {t.company}
+                  </div>
                 </div>
               </div>
             </div>
@@ -420,7 +466,8 @@ function FinalCTA() {
           Stop fighting your POS. Start growing your business.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-secondary-foreground/80">
-          Join thousands of merchants using KasiPOS to run faster, leaner and clearer operations — starting today, with zero setup fees.
+          Join thousands of merchants using KasiPOS to run faster, leaner and clearer operations —
+          starting today, with zero setup fees.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
@@ -447,10 +494,16 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row">
         <p>© 2026 KasiPOS. Built for modern commerce.</p>
         <div className="flex items-center gap-6">
-          <a href="#" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+          >
             <Github className="h-4 w-4" /> GitHub
           </a>
-          <a href="#" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+          >
             <BookOpen className="h-4 w-4" /> Documentation
           </a>
         </div>
