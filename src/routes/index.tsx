@@ -18,7 +18,6 @@ import {
   RefreshCw,
   Gauge,
 } from "lucide-react";
-import howItWorksImage from "@/assets/how-it-works.png";
 import socialProofImage from "@/assets/social-proof.png";
 import step1Image from "@/assets/step-1-store.png";
 import step2Image from "@/assets/step-2-products.png";
