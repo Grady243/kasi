@@ -10,7 +10,7 @@ export default function SocialProof() {
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-4xl">
               Numbers that speak for themselves
             </h2>
-            <p className="mt-4 max-w-md text-sm text-muted-foreground">
+            <p className="mt-4 text-muted-foreground">
               From neighborhood shops to growing chains — KasiPOS keeps commerce running fast,
               reliable and always on.
             </p>
