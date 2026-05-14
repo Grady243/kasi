@@ -12,5 +12,6 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
     deploymentStrategy: "vercel",
+    base: "/kasipos-landing/",
   },
 });
