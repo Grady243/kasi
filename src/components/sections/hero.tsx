@@ -2,7 +2,7 @@ import { ArrowRight, BookOpen } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="border-b border-border">
+    <section id="home" className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 border border-border bg-primary/10 px-3 py-1 text-xs text-muted-foreground">

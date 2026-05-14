@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
+import SocialProofLogos from "@/components/sections/social-proof-logos";
 import SocialProof from "@/components/sections/social-proof";
 import WhyKasiPOS from "@/components/sections/why-kasipos";
 import Features from "@/components/sections/features";
@@ -33,6 +34,7 @@ function Index() {
     <main className="min-h-screen bg-background">
       <Nav />
       <Hero />
+      <SocialProofLogos />
       <SocialProof />
       <WhyKasiPOS />
       <Features />

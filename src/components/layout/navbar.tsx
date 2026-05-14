@@ -5,17 +5,23 @@ export default function Nav() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div>
-          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight">
+          <a href="#home" className="flex items-center gap-2 font-semibold tracking-tight">
             <img src="/src/assets/file.png" alt="logo kasipos" width="30px" />
             KasiPOS
           </a>
         </div>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#features" className="hover:text-foreground transition-colors">
-            Features
+          <a href="#home" className="hover:text-foreground transition-colors">
+            Home
+          </a>
+          <a href="#stats" className="hover:text-foreground transition-colors">
+            Stats
           </a>
           <a href="#why" className="hover:text-foreground transition-colors">
             Why KasiPOS
+          </a>
+          <a href="#features" className="hover:text-foreground transition-colors">
+            Features
           </a>
           <a href="#how" className="hover:text-foreground transition-colors">
             How it works
