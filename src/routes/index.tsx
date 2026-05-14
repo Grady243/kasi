@@ -1,25 +1,31 @@
+import { useTheme } from "@/hooks/use-theme";
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ShoppingCart,
-  Package,
-  BarChart3,
-  Zap,
-  ShieldCheck,
-  MonitorSmartphone,
+  Activity,
   ArrowRight,
-  Github,
+  BarChart3,
   BookOpen,
-  Sun,
-  Moon,
+  Boxes,
   Check,
-  Star,
-  Rocket,
-  Lock,
-  RefreshCw,
+  Clock,
+  CreditCard,
   Gauge,
+  Github,
+  Lock,
+  MonitorSmartphone,
+  Moon,
+  Package,
+  RefreshCw,
+  Rocket,
+  ShieldCheck,
+  ShoppingCart,
+  Star,
+  Store,
+  Sun,
+  TrendingUp,
+  Users,
+  Zap,
 } from "lucide-react";
-import { Store, Boxes, CreditCard, Users, Activity, Clock, TrendingUp } from "lucide-react";
-import { useTheme } from "@/hooks/use-theme";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -182,10 +188,12 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="inline-block h-3 w-3 bg-primary" />
-          KasiPOS
-        </a>
+        <div>
+          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight">
+            <img src="/src/assets/file.png" alt="logo kasipos" width="30px" />
+            KasiPOS
+          </a>
+        </div>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#features" className="hover:text-foreground transition-colors">
             Features
@@ -219,11 +227,11 @@ function Hero() {
     <section className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 border border-border bg-surface px-3 py-1 text-xs text-muted-foreground">
+          <div className="mb-6 inline-flex items-center gap-2 border border-border bg-primary/10 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 bg-primary" />
-            New — KasiPOS 2.0 is here
+            Modern Point Of Sales
           </div>
-          <h1 className="text-balance text-5xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="text-balance text-5xl font-semibold tracking-tight md:text-7xl">
             Simplify your sales with KasiPOS
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-balance text-lg text-muted-foreground">
@@ -284,14 +292,14 @@ function SocialProof() {
         <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <p className="text-xs uppercase tracking-widest text-primary">Trusted by merchants</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-4xl">
               Numbers that speak for themselves
             </h2>
-          </div>
-          <p className="max-w-md text-sm text-muted-foreground">
-            From neighborhood shops to growing chains — KasiPOS keeps commerce running fast,
-            reliable and always on.
-          </p>
+            <p className="mt-4 max-w-md text-sm text-muted-foreground">
+              From neighborhood shops to growing chains — KasiPOS keeps commerce running fast,
+              reliable and always on.
+            </p>
+          </div>{" "}
         </div>
 
         <div className="grid grid-cols-1 border border-border sm:grid-cols-2 lg:grid-cols-4">
@@ -385,7 +393,7 @@ function Features() {
               </div>
               <h3 className="mt-6 text-lg font-semibold">{f.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
-              <div className="mt-4 flex items-start gap-2 border-t border-border pt-4">
+              <div className="mt-4 flex items-start gap-2 pt-4">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <p className="text-sm text-foreground">{f.benefit}</p>
               </div>
@@ -424,7 +432,7 @@ function HowItWorks() {
                 <s.icon className="h-8 w-8 text-[#03ab3a]" strokeWidth={1.75} />
               </div>
               <h3 className="mt-8 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <p className="mt-18 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>
           ))}
         </div>
