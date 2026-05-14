@@ -1,14 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-import Nav from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-import Hero from "@/components/sections/hero";
-import SocialProofLogos from "@/components/sections/social-proof-logos";
-import SocialProof from "@/components/sections/social-proof";
-import WhyKasiPOS from "@/components/sections/why-kasipos";
+import Nav from "@/components/layout/navbar";
 import Features from "@/components/sections/features";
-import HowItWorks from "@/components/sections/how-it-works";
-import Testimonials from "@/components/sections/testimonials";
 import FinalCTA from "@/components/sections/final-cta";
+import Hero from "@/components/sections/hero";
+import HowItWorks from "@/components/sections/how-it-works";
+import SocialProof from "@/components/sections/social-proof";
+import Testimonials from "@/components/sections/testimonials";
+import WhyKasiPOS from "@/components/sections/why-kasipos";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,7 +33,6 @@ function Index() {
     <main className="min-h-screen bg-background">
       <Nav />
       <Hero />
-      <SocialProofLogos />
       <SocialProof />
       <WhyKasiPOS />
       <Features />

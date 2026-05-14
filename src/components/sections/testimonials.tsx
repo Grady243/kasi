@@ -1,5 +1,5 @@
-import { Star } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
+import { Star } from "lucide-react";
 
 export default function Testimonials() {
   return (
@@ -24,7 +24,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mt-5 text-base leading-relaxed text-foreground">"{t.quote}"</p>
-              <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+              <div className="mt-6 flex items-center gap-3 pt-3">
                 <div className="flex h-10 w-10 items-center justify-center bg-secondary text-sm font-semibold text-secondary-foreground">
                   {t.name
                     .split(" ")

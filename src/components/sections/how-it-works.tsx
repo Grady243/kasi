@@ -6,9 +6,11 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-16 max-w-2xl">
           <p className="text-xs uppercase tracking-widest text-primary">How it works</p>
+
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
             Up and running in three steps
           </h2>
+
           <p className="mt-4 text-muted-foreground">
             From signup to first sale in less than an hour. No installer, no training day.
           </p>
@@ -18,16 +20,26 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <div
               key={s.n}
-              className="flex flex-col bg-background p-8 transition-colors hover:bg-surface-2"
+              className="relative overflow-hidden bg-background p-8 transition-all duration-300 hover:bg-surface-2"
             >
-              <div className="flex items-center justify-between">
-                <span className="text-5xl font-bold leading-none tracking-tight text-[#03ab3a] md:text-6xl">
-                  {s.n}
-                </span>
-                <s.icon className="h-8 w-8 text-[#03ab3a]" strokeWidth={1.75} />
+              {/* Decorative Number */}
+              <span className="absolute right-8 top-8 text-6xl font-bold leading-none text-muted-foreground/10 md:text-7xl">
+                {s.n}
+              </span>
+
+              {/* Icon */}
+              <div className="inline-flex h-18 w-18 items-center justify-center rounded-xl bg-primary/0 text-primary">
+                <s.icon className="h-7 w-7" strokeWidth={1.8} />
               </div>
-              <h3 className="mt-8 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-18 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+
+              {/* Content */}
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold tracking-tight">{s.title}</h3>
+
+                <p className="mt-20 max-w-xs text-sm leading-relaxed text-muted-foreground">
+                  {s.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>

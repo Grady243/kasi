@@ -1,5 +1,5 @@
-import { Check } from "lucide-react";
 import { features } from "@/data/features";
+import { Check } from "lucide-react";
 
 export default function Features() {
   return (
@@ -15,7 +15,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px bg-border border border-border md:grid-cols-3">
           {features.map((f) => (
             <div
               key={f.title}
