@@ -27,7 +27,7 @@ export default function Hero() {
               href="#features"
               className="inline-flex items-center gap-2 border border-border-strong px-5 py-3 text-sm font-medium text-foreground hover:border-primary transition-colors"
             >
-              <BookOpen className="h-4 w-4" /> Explore features
+              <BookOpen className="h-4 w-4" /> View documentation
             </a>
           </div>
         </div>
