@@ -1,3 +1,4 @@
+import logo from "@/assets/file.png";
 import ThemeToggle from "@/components/ui/theme-toggle";
 
 export default function Nav() {
@@ -6,7 +7,7 @@ export default function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div>
           <a href="#home" className="flex items-center gap-2 font-semibold tracking-tight">
-            <img src="/src/assets/file.png" alt="logo kasipos" width="30px" />
+            <img src={logo} alt="logo kasipos" width="30px" />
             KasiPOS
           </a>
         </div>
