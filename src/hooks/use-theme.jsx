@@ -1,16 +1,15 @@
 import { useEffect, useState, useCallback } from "react";
 
-type Theme = "light" | "dark";
 const STORAGE_KEY = "kasipos-theme";
 
-function getInitial(): Theme {
+function getInitial() {
   if (typeof window === "undefined") return "light";
   const stored = window.localStorage.getItem(STORAGE_KEY);
   return stored === "dark" ? "dark" : "light";
 }
 
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const initial = getInitial();
